@@ -1,2 +1,6 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.erb
+%h1 hola vale, bienvenido
+- if current_user
+	Haz entrado como: #{current_user.email}
+	=link_to 'Cerrar sesion', destroy_user_session_path, method: 'delete'
+
+%p como estas?
